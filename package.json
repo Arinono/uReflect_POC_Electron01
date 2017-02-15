@@ -4,7 +4,7 @@
   "description": "basic app example",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron --disable-http-cache index.js"
   },
   "author": "Andrea Giammarchi",
   "license": "MIT",
