@@ -16,16 +16,26 @@ body {
   margin          : 0;
   padding         : 0;
   color           : #eeeeec;
-  background      : #292929;
+  background      : cyan;
   text-align      : center;
   align-items     : center;
   font-family     : sans-serif;
   flex-direction  : column;
   justify-content : center;
+  /**
+   * background
+   *
+   *
+   *
+   *
+   *
+   * : #292929;
+   */
 }
 
 h1,
 h2 {
+  background  : magenta;
   font-family : Roboto;
   font-weight : 400;
 }
