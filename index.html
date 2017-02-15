@@ -21,35 +21,34 @@
     </header>
     <main></main>
     <script>
-    const
-      main = document.querySelector('main'),
-      findReachableIPV4Address = () => {
-        const ni = require('os').networkInterfaces();
-        return Object.keys(ni).reduce((out, key) => {
-          return ni[key].reduce((out, iface) => {
-            if (iface.family === 'IPv4' && iface.address !== '127.0.0.1') {
-              out.push(iface.address);
-            }
-            return out;
-          }, out);
-        }, []);
-      }
-    ;
+    // const
+    //   main = document.querySelector('main'),
+    //   findReachableIPV4Address = () => {
+    //     const ni = require('os').networkInterfaces();
+    //     return Object.keys(ni).reduce((out, key) => {
+    //       return ni[key].reduce((out, iface) => {
+    //         if (iface.family === 'IPv4' && iface.address !== '127.0.0.1') {
+    //           out.push(iface.address);
+    //         }
+    //         return out;
+    //       }, out);
+    //     }, []);
+    //   }
+    // ;
 
-    findReachableIPV4Address().forEach(function (ip) {
-      main.appendChild(
-        document.createElement('p')
-      ).textContent = ip;
-    });
+    // findReachableIPV4Address().forEach(function (ip) {
+    //   main.appendChild(
+    //     document.createElement('p')
+    //   ).textContent = ip;
+    // });
 
-    main.appendChild(
-      document.createElement('p')
-    ).textContent = [
-      1234567890,0987654321  
-      // document.documentElement.clientWidth,
-      // document.documentElement.clientHeight
-    ].join('x');
-
+    // main.appendChild(
+    //   document.createElement('p')
+    // ).textContent = [
+    //   document.documentElement.clientWidth,
+    //   document.documentElement.clientHeight
+    // ].join('x');
+    //
     </script>
   </body>
 </html>
