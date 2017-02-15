@@ -4,7 +4,7 @@
   "description": "basic app example",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron --disable-http-cache index.js"
   },
   "author": "Andrea Giammarchi",
   "license": "MIT",
@@ -15,13 +15,15 @@
     "interact.js": "^1.2.8",
     "jquery": "^3.1.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "interact.js": "^1.2.6"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-preset-env": "^1.1.8",
     "electron": "latest",
-    "tiny-cdn": "latest"
+    "tiny-cdn": "latest",
+    "webpack": "^2.2.1"
   },
   "repository": {
     "type": "git",
