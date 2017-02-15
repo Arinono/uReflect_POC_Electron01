@@ -11,11 +11,13 @@
   "dependencies": {
     "benja": "latest",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "interact.js": "^1.2.6"
   },
   "devDependencies": {
     "electron": "latest",
-    "tiny-cdn": "latest"
+    "tiny-cdn": "latest",
+    "webpack": "^2.2.1"
   },
   "repository": {
     "type": "git",
