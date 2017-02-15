@@ -24,6 +24,12 @@ body {
   justify-content : center;
 }
 
+h1,
+h2 {
+  font-family : Roboto;
+  font-weight : 400;
+}
+
 h1 {
   color     : #ffffff;
   font-size : 1.5rem;
@@ -33,7 +39,6 @@ h2 {
   margin-bottom : 0;
   color         : #8c8c8b;
   font-size     : 1.2rem;
-  font-weight   : lighter;
 }
 
 p:first-child {
