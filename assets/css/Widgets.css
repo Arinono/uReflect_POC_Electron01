@@ -1,0 +1,13 @@
+.widgetContainer {
+  width  : 100vw;
+  height : 100vh;
+}
+
+.square {
+  width  : calc(100vw/12);
+  height : calc(100vh/6);
+}
+
+.magenta {
+  background : magenta;
+}

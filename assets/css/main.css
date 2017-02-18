@@ -20,43 +20,7 @@ h2 {
   font-size     : 1.2em;
 }
 
-img {
-  width : 15vh;
-}
-
-.grid {
-  position : absolute;
-}
-
-.container {
-  width         : 100%;
-  margin-right  : auto;
-  margin-left   : auto;
-  padding-right : 0;
-  padding-left  : 0;
-}
-
-.col-xs-12 {
-  height  : calc(100vh / 6);
-  padding : 0;
-}
-
-.show-grid .col-xs-12 {
-  border-bottom : 1px solid white;
-}
-
-.show-grid .col-xs-1 {
-  border-right : 1px solid white;
-}
-
-.col-xs-1 {
-  height : calc(100vh / 6);
-}
-
-.show-grid .col-xs-1:first-child {
-  border-left : 1px solid white;
-}
-
-.show-grid .col-xs-12:first-child {
-  border-top : 1px solid white;
+#app {
+  width  : 100vw;
+  height : 100vh;
 }
