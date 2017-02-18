@@ -7,12 +7,13 @@ require('http')
   .listen(8080, '0.0.0.0');
   // will respond to :80 too via iptables
 
+// Debug tools
+require('electron-debug')({showDevTools: true});
+
 // simple app example
-const
-  electron = require('electron'),
-  app = electron.app,
-  BrowserWindow = electron.BrowserWindow
-;
+const electron = require('electron');
+var app = electron.app;
+var BrowserWindow = electron.BrowserWindow;
 
 // in case by default WebGL doesn't work ... (rpi or others)
 app.commandLine.appendSwitch('--ignore-gpu-blacklist');
@@ -53,5 +54,4 @@ app.once('ready', () => {
   // for debugging purpose, it might be handy to be able
   // to reload the window simply via `touch ~/app/reload`
   require('fs').watch('reload', () => app.quit());
-
 });

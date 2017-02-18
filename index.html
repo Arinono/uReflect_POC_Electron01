@@ -2,23 +2,19 @@
 <html>
   <head>
     <!-- to have access to local or global scripts -->
-    <script>
-    require(process.cwd() + '/node_modules/benja').paths();
-    </script>
+    <script>require(process.cwd() + '/node_modules/benja').paths();</script>
     <!-- for debugging purpose -->
     <script>document.documentElement.ondblclick=()=>location.reload();</script>
+
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="assets/css/main.css">
     <title>uReflect</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <img src="logo-dark.svg">
-      <h1>uReflect</h1>
-      <h2>Connected Mirror</h2>
-    </header>
-    <main></main>
+    <div id="app"></div>
+    <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
