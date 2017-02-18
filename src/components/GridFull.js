@@ -13,12 +13,6 @@ var GridFull = React.createClass({
         <GridRow />
         <GridRow />
         <GridRow />
-        <GridRow />
-        <GridRow />
-        <GridRow />
-        <GridRow />
-        <GridRow />
-        <GridRow />
       </Grid>
     );
   }
