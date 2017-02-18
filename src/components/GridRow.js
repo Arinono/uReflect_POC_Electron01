@@ -4,14 +4,14 @@ import { Row, Col } from 'react-bootstrap';
 var GridRow = React.createClass({
   render: function() {
     return (
-      <Row>
+      <Col xs={12}>
         <Col xs={2}></Col>
         <Col xs={2}></Col>
         <Col xs={2}></Col>
         <Col xs={2}></Col>
         <Col xs={2}></Col>
         <Col xs={2}></Col>
-      </Row>
+      </Col>
     );
   }
 });
