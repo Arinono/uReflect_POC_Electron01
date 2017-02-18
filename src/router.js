@@ -6,7 +6,6 @@ import MainActivityContainer from './containers/MainActivityContainer';
 
 var routes = (
     <Route path="/" component={MainActivityContainer}>
-
     </Route>
 );
 

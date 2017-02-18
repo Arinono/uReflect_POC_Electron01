@@ -24,6 +24,10 @@ img {
   width : 15vh;
 }
 
+.grid {
+  position : absolute;
+}
+
 .container {
   width         : 100%;
   margin-right  : auto;

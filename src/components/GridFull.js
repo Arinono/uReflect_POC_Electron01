@@ -6,7 +6,7 @@ import GridRow from './GridRow';
 var GridFull = React.createClass({
   render: function() {
     return (
-      <Grid className="show-grid">
+      <Grid className="show-grid grid">
         <GridRow />
         <GridRow />
         <GridRow />

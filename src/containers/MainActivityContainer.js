@@ -1,11 +1,11 @@
 import React from 'react';
 
-import MainActivity from '../components/MainActivity';
+import ClockContainer from './ClockContainer';
 
 var MainActivityContainer = React.createClass({
   render: function() {
     return (
-      <MainActivity />
+      <ClockContainer />
     );
   }
 });
