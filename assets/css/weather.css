@@ -11,3 +11,9 @@
 .bot-box:not(:last-child) {
     border-right: 1px solid white;
 }
+.weather {
+  min-width: 400px;
+  min-height: 221px;
+  width: 400px;
+  height: 221px;
+}
