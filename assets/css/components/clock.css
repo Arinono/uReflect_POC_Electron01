@@ -1,15 +1,24 @@
+.widget {
+  background : rgb(10, 10, 10);
+}
+
 .clock-frame {
-  width         : 140px;
-  height        : 140px;
-  border        : 2px solid white;
-  border-radius : 70px;
+  width         : calc(100vw/12);
+  border        : 0.2em solid white;
+  border-radius : 100%;
+}
+
+.clock-frame:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock-center {
   z-index       : 2;
   position      : absolute;
-  top           : 64px;
-  left          : 64px;
+  top           : calc(100vw/12 * 64 / 140 + -10px);
+  left          : calc(100vw/12 * 64 / 140 + 3px);
   width         : 10px;
   height        : 10px;
   border-radius : 5px;
@@ -18,12 +27,17 @@
 
 .clock .digits {
   position : absolute;
-  top      : 15px;
-  left     : 15px;
-  width    : 110px;
-  height   : 110px;
+  top      : calc(100vw/12 * 15 / 140);
+  left     : calc(100vw/12 * 15 / 140);
+  width    : calc(100vw/12 * 110 / 140);
   margin   : 0;
   padding  : 0;
+}
+
+.clock .digits:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock .digits li {
@@ -130,19 +144,19 @@
 }
 
 .clk-hourhand {
-  left   : 68px;
+  left   : calc(100vw/12 * 70 / 140);
   width  : 4px;
   height : 25px;
 }
 
 .clk-minutehand {
-  left   : 68px;
+  left   : calc(100vw/12 * 70 / 140);
   width  : 4px;
   height : 42px;
 }
 
 .clk-secondhand {
-  left   : 69px;
+  left   : calc(100vw/12 * 70 / 140);
   width  : 2px;
   height : 42px;
 }
@@ -151,7 +165,7 @@
 .clk-minutehand,
 .clk-secondhand {
   position                 : absolute;
-  top                      : 70px;
+  top                      : calc(100vw/12 * 60 / 140);
   background               : rgba(255, 255, 255, 0.8);
   -moz-transform-origin    : top center;
   -ms-transform-origin     : top center;

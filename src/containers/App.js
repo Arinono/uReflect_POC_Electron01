@@ -9,7 +9,6 @@ var App = React.createClass({
     return (
       <div className="widgetContainer">
         <ClockContainer />
-        <Weather />
       </div>
     );
   }
