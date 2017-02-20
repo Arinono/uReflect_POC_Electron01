@@ -1,0 +1,13 @@
+.nextDaysWeatherContainer {
+    border: "1px solid white";
+    display: "flex";
+    flex-flow: "row nowrap";
+    justify-content: "space-around";
+}
+.bot-box {
+    width: 33%;
+    text-align: center;
+}
+.bot-box:not(:last-child) {
+    border-right: 1px solid white;
+}
