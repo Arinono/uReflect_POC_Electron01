@@ -52,7 +52,6 @@ var CurrentDayWeather = React.createClass({
                                       "tstorms" : this.day ? "day-thunderstorm" : "night-alt-thunderstorm",
                                       "unknown" : this.day ? "na" : "na"};
         this.setState({icon: this.weatherConditionsIcons[this.props.currentDayWeather.icon]});
-        console.log(this.props.currentDayWeather);
     },
     componentWillUnmount: function() {
       clearInterval(this.interval);
