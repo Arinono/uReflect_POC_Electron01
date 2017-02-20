@@ -1,6 +1,6 @@
 {
   "name": "ureflect_poc_electron",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "basic app example",
   "main": "index.js",
   "scripts": {
