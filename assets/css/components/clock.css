@@ -140,19 +140,19 @@
 }
 
 .clk-hourhand {
-  left   : 70px;
+  left   : 68px;
   width  : 4px;
   height : 25px;
 }
 
 .clk-minutehand {
-  left   : 70px;
+  left   : 68px;
   width  : 4px;
   height : 42px;
 }
 
 .clk-secondhand {
-  left   : 70px;
+  left   : 69px;
   width  : 2px;
   height : 42px;
 }
