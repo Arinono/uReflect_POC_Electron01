@@ -1,12 +1,6 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
 
-const currentWeather = {
-  textAlign: 'center',
-  border: '1px solid white',
-  padding: 10
-};
-
 var CurrentDayWeather = React.createClass({
     getInitialState: function() {
       return {
@@ -62,7 +56,7 @@ var CurrentDayWeather = React.createClass({
     },
     render: function() {
       return (
-        <div style={currentWeather}>
+        <div className="currentWeather text-center">
           <WeatherIcons name={this.state.icon}  size="2x" />
           <div>Today</div>
           <div>{this.props.currentDayWeather.conditions}</div>

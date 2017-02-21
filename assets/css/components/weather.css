@@ -1,13 +1,17 @@
 .nextDaysWeatherContainer {
-    border: "1px solid white";
-    display: "flex";
-    flex-flow: "row nowrap";
-    justify-content: "space-around";
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 10px 10px 10px 10px;
 }
 
 .bot-box {
     width: 33%;
-    text-align: center;
 }
 
 .bot-box:not(:last-child) {
@@ -19,4 +23,13 @@
   min-height: 221px;
   width: 400px;
   height: 221px;
+}
+
+.currentWeather {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10px 10px 10px 10px;
 }
