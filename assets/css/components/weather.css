@@ -20,9 +20,8 @@
 
 .weather {
   min-width: calc(100vw/12 * 3);
-  min-height: calc(100vw/12 * 1.5); /* 240px */
+  min-height: calc(100vh/12 * 2); /* 240px */
   width: calc(100vw/12 * 3);
-  height: calc(100vw/12 * 1.5);
 }
 
 .currentWeather {
