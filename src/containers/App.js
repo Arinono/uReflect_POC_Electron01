@@ -2,7 +2,7 @@ import React from 'react';
 
 import TestWidget from '../components/TestWidget';
 import ClockContainer from './ClockContainer';
-import Weather from '../components/Weather';
+import WeatherContainer from './WeatherContainer';
 import SpotifyContainer from './SpotifyContainer';
 import WebcamContainer from './WebcamContainer';
 import DateContainer from './DateContainer';
@@ -12,7 +12,7 @@ var App = React.createClass({
     return (
       <div className="widgetContainer">
         <ClockContainer />
-        <Weather />
+        <WeatherContainer />
         <SpotifyContainer />
         <DateContainer />
       </div>
