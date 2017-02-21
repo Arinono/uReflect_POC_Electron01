@@ -26,15 +26,12 @@ var twitterReader = {
       //   mainWindow.webContents.send("tweets", textContentOfTweets);
       // });
 
-      var params = {count: 50};//{q: 'place:40ce1cd0eac02958', lang: 'fr', count: 50};
+      var params = {count: 200};//{q: 'place:40ce1cd0eac02958', lang: 'fr', count: 50};
       client.get('statuses/home_timeline', params, function(error, tweets, response) {
-        if (!error) {
-          console.log(tweets);
-        }
 
-        console.log(tweets);
         var textContentOfTweets = tweets.map(function(t) { return { text: t.text, user: t.user.name }; });
-//        console.log(textContentOfTweets);
+//         return (textContentOfTweets);
+        console.log(tweets);
         process.send(textContentOfTweets);
 //        mainWindow.webContents.send("tweets", textContentOfTweets);
       });

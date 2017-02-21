@@ -1,21 +1,21 @@
 import React from 'react';
-import cp from 'child_process';
+import Tweets from '../components/Tweets';
+import ReactScrollableList from 'react-scrollable-list';
 
 var TwitterContainer = React.createClass({
+
   render: function() {
 
-    console.log("READ");
+    let listItems = [];
+    for (let i = 0; i < 100; i++) {
+      listItems.push({ id: i, content: i });
+    }
 
-    var child = cp.fork('./read-twitter');
+    return (<div className="widget twitter">
+    <Tweets />
+    </div>);
+  },
 
-    child.on('message', function(m) {
-      console.log('received: ' + m);
-    });
-
-   console.log("READ2");
-
-    return (null);
-  }
 });
 
 export default TwitterContainer;

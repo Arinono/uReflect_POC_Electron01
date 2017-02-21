@@ -1,0 +1,5 @@
+.twitter {
+  overflow-y: auto;
+  width: calc(100vw / 12 * 3);
+  height: calc(100vh / 6 * 2);
+}
