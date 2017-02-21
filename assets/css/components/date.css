@@ -1,0 +1,10 @@
+.date {
+  width      : calc(100vw/12 * 6);
+  min-width  : calc(100vw/12 * 3);
+  text-align : center;
+}
+
+.date span {
+  font-family : Roboto Regular;
+  font-size   : 4em;
+}

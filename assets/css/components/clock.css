@@ -1,40 +1,56 @@
+.clock {
+  width  : calc(100vw/12);
+  height : calc(100vh/6);
+}
+
 .clock-frame {
-  width         : 140px;
-  height        : 140px;
-  border        : 2px solid white;
-  border-radius : 70px;
+  width         : calc(100vw/12);
+  border        : 0.2em solid white;
+  border-radius : 100%;
+}
+
+.clock-frame:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock-center {
   z-index       : 2;
   position      : absolute;
-  top           : 64px;
-  left          : 64px;
-  width         : 10px;
-  height        : 10px;
-  border-radius : 5px;
+  top           : calc(100vw/12 * 64 / 140);
+  left          : calc(100vw/12 * 64 / 140);
+  width         : calc(100vw/12 * 10 / 140);
+  height        : calc(100vw/12 * 10 / 140);
+  border-radius : calc(100vw/12 * 5 / 140);
   background    : white;
 }
 
 .clock .digits {
   position : absolute;
-  top      : 15px;
-  left     : 15px;
-  width    : 110px;
-  height   : 110px;
+  top      : calc(100vw/12 * 15 / 140);
+  left     : calc(100vw/12 * 15 / 140);
+  width    : calc(100vw/12 * 110 / 140);
   margin   : 0;
   padding  : 0;
+}
+
+.clock .digits:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock .digits li {
   display       : block;
   position      : absolute;
-  width         : 18px;
-  height        : 18px;
+  width         : calc(100vw/12 * 18 / 140);
+  height        : calc(100vw/12 * 18 / 140);
   margin        : 0;
   padding       : 0;
   border-radius : 9px;
   text-align    : center;
+  font-family   : Roboto Regular;
   font-size     : 14px;
   line-height   : 18px;
 }
@@ -130,29 +146,31 @@
 }
 
 .clk-hourhand {
-  left   : 68px;
-  width  : 4px;
-  height : 25px;
+  left       : calc(100vw/12 * 68 / 140);
+  width      : calc(100vw/12 * 4 / 140);
+  height     : calc(100vw/12 * 25 / 140);
+  background : rgba(255, 255, 255, 0.8);
 }
 
 .clk-minutehand {
-  left   : 68px;
-  width  : 4px;
-  height : 42px;
+  left       : calc(100vw/12 * 68 / 140);
+  width      : calc(100vw/12 * 4 / 140);
+  height     : calc(100vw/12 * 42 / 140);
+  background : rgba(255, 255, 255, 0.8);
 }
 
 .clk-secondhand {
-  left   : 69px;
-  width  : 2px;
-  height : 42px;
+  left       : calc(100vw/12 * 69 / 140);
+  width      : calc(100vw/12 * 2 / 140);
+  height     : calc(100vw/12 * 42 / 140);
+  background : red;
 }
 
 .clk-hourhand,
 .clk-minutehand,
 .clk-secondhand {
   position                 : absolute;
-  top                      : 70px;
-  background               : rgba(255, 255, 255, 0.8);
+  top                      : calc(100vw/12 * 70 / 140);
   -moz-transform-origin    : top center;
   -ms-transform-origin     : top center;
   -o-transform-origin      : top center;

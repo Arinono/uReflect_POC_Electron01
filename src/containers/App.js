@@ -4,6 +4,10 @@ import { Grid, Col } from 'react-bootstrap';
 import TestWidget from '../components/TestWidget';
 import ClockContainer from './ClockContainer';
 import GridFull from '../components/GridFull';
+import WeatherContainer from './WeatherContainer';
+import SpotifyContainer from './SpotifyContainer';
+import WebcamContainer from './WebcamContainer';
+import DateContainer from './DateContainer';
 
 var App = React.createClass({
   render: function() {
@@ -11,7 +15,8 @@ var App = React.createClass({
       <div className="widgetContainer" id="widget_container">
         <GridFull />
         <ClockContainer />
-        <ClockContainer />
+        <WeatherContainer />
+        <DateContainer />
       </div>
     );
   }
