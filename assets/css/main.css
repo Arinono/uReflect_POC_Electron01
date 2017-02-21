@@ -24,3 +24,9 @@ h2 {
   width  : 100vw;
   height : 100vh;
 }
+
+.show-grid {
+  display: none;
+  position: absolute;
+  z-index: -2;
+}
