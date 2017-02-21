@@ -27,7 +27,7 @@ var NextDaysWeatherContainer = React.createClass({
                                         "flurries" : "day-windy",
                                         "fog" : "day-fog",
                                         "hazy" : "day-haze",
-                                        "mostlycloudy" : "day-cloudy",
+                                        "mostlycloudy" : "cloud",
                                         "mostlysunny" : "day-sunny-overcast",
                                         "partlycloudy" : "day-cloudy",
                                         "partlysunny" : "day-sunny-overcast",
@@ -41,9 +41,11 @@ var NextDaysWeatherContainer = React.createClass({
             return (
               <div className="bot-box text-center" key={weather.period}>
                 <WeatherIcons name={icon} size="2x" />
-                <div>{weather.date.day} {weather.date.monthname} {weather.date.year}</div>
-                <div>{weather.conditions}</div>
-                <div>{weather.low.celsius}°C ~ {weather.high.celsius}°C</div>
+                <div className="paddingWeatherIcon">
+                  <div>{weather.date.day} {weather.date.monthname} {weather.date.year}</div>
+                  <div>{weather.conditions}</div>
+                  <div>{weather.low.celsius}°C ~ {weather.high.celsius}°C</div>
+                </div>
               </div>
             );
         })}

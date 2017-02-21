@@ -12,7 +12,7 @@ function weatherRequest() {
   var weather = null;
   if (navigator.onLine) {
     $.ajax({
-      url: "http://api.wunderground.com/api/6d14d0a9792df261/forecast/lang:FR/q/FR/Bordeaux.json",
+      url: "http://api.wunderground.com/api/6d14d0a9792df261/forecast/q/FR/Bordeaux.json",
       async: false
     }).done(function(data) {
       weather = data;
