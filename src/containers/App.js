@@ -5,6 +5,7 @@ import ClockContainer from './ClockContainer';
 import Weather from '../components/Weather';
 import SpotifyContainer from './SpotifyContainer';
 import WebcamContainer from './WebcamContainer';
+import TwitterContainer from './TwitterContainer';
 
 var App = React.createClass({
   render: function() {
@@ -13,6 +14,7 @@ var App = React.createClass({
         <ClockContainer />
         <Weather />
         <SpotifyContainer />
+        <TwitterContainer />
       </div>
     );
   }
