@@ -1,3 +1,8 @@
+.clock {
+  width  : calc(100vw/12);
+  height : calc(100vh/6);
+}
+
 .clock-frame {
   width         : calc(100vw/12);
   border        : 0.2em solid white;
@@ -45,6 +50,7 @@
   padding       : 0;
   border-radius : 9px;
   text-align    : center;
+  font-family   : Roboto Regular;
   font-size     : 14px;
   line-height   : 18px;
 }
