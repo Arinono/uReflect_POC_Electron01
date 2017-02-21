@@ -140,21 +140,24 @@
 }
 
 .clk-hourhand {
-  left   : calc(100vw/12 * 68 / 140);
-  width  : calc(100vw/12 * 4 / 140);
-  height : calc(100vw/12 * 25 / 140);
+  left       : calc(100vw/12 * 68 / 140);
+  width      : calc(100vw/12 * 4 / 140);
+  height     : calc(100vw/12 * 25 / 140);
+  background : rgba(255, 255, 255, 0.8);
 }
 
 .clk-minutehand {
-  left   : calc(100vw/12 * 68 / 140);
-  width  : calc(100vw/12 * 4 / 140);
-  height : calc(100vw/12 * 42 / 140);
+  left       : calc(100vw/12 * 68 / 140);
+  width      : calc(100vw/12 * 4 / 140);
+  height     : calc(100vw/12 * 42 / 140);
+  background : rgba(255, 255, 255, 0.8);
 }
 
 .clk-secondhand {
-  left   : calc(100vw/12 * 69 / 140);
-  width  : calc(100vw/12 * 2 / 140);
-  height : calc(100vw/12 * 42 / 140);
+  left       : calc(100vw/12 * 69 / 140);
+  width      : calc(100vw/12 * 2 / 140);
+  height     : calc(100vw/12 * 42 / 140);
+  background : red;
 }
 
 .clk-hourhand,
@@ -162,7 +165,6 @@
 .clk-secondhand {
   position                 : absolute;
   top                      : calc(100vw/12 * 70 / 140);
-  background               : rgba(255, 255, 255, 0.8);
   -moz-transform-origin    : top center;
   -ms-transform-origin     : top center;
   -o-transform-origin      : top center;

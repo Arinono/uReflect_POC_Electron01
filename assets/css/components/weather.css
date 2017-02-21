@@ -19,9 +19,9 @@
 }
 
 .weather {
-  min-width: 400px;
+  min-width: calc(100vw/12 * 3);
   min-height: 221px;
-  width: 400px;
+  width: calc(100vw/12 * 3);
   height: 221px;
 }
 
