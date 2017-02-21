@@ -6,7 +6,6 @@ import App from './containers/App';
 
 var routes = (
     <Route path="/" component={App}>
-
     </Route>
 );
 

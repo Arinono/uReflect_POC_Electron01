@@ -1,8 +1,13 @@
 .clock-frame {
   width         : 140px;
-  height        : 140px;
-  border        : 2px solid white;
-  border-radius : 70px;
+  border        : 0.2em solid white;
+  border-radius : 100%;
+}
+
+.clock-frame:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock-center {
@@ -21,9 +26,14 @@
   top      : 15px;
   left     : 15px;
   width    : 110px;
-  height   : 110px;
   margin   : 0;
   padding  : 0;
+}
+
+.clock .digits:before {
+  content     : "";
+  display     : block;
+  padding-top : 100%;
 }
 
 .clock .digits li {
