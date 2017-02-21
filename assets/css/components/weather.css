@@ -42,3 +42,64 @@
 .paddingWeatherIcon {
   padding-top : 10px;
 }
+
+.wi-day-windy:before {
+  color : lightsteelblue;
+}
+
+.wi-day-rain:before {
+  color : cornflowerblue;
+}
+
+.wi-day-sleet:before {
+  color : honeydew;
+}
+
+.wi-day-snow:before {
+  color : honeydew;
+}
+
+.wi-day-thunderstorm:before {
+  color : gold;
+}
+
+.wi-day-sunny:before {
+  color : gold;
+}
+
+.wi-day-cloudy:before {
+  color : lavender;
+}
+
+.wi-day-fog:before {
+  color : lavender;
+}
+
+.wi-day-haze:before {
+  color : lavender;
+}
+
+.wi-day-sunny-overcast:before {
+  color : lavender;
+}
+
+.wi-night-alt-cloudy:before,
+.wi-night-alt-rain:before,
+.wi-night-alt-showers:before,
+.wi-night-alt-sleet:before,
+.wi-night-alt-sleet:before,
+.wi-night-alt-snow:before,
+.wi-night-alt-snow:before,
+.wi-night-alt-thunderstorm:before,
+.wi-night-clear:before,
+.wi-night-clear:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-fog:before,
+.wi-night-fog:before,
+.wi-night-partly-cloudy:before,
+.wi-night-partly-cloudy:before,
+.wi-night-thunderstorm:before {
+  color : darkslateblue;
+}
