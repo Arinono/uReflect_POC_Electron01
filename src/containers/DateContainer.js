@@ -1,13 +1,17 @@
 import React from 'react';
 
 import DateDay from '../components/DateDay'
+import Widget from './Widget';
 
 var DateContainer = React.createClass({
   render: function() {
-    return (
-      <div className="widget date">
+    var render =
+      <div className="date">
         <DateDay />
-      </div>
+      </div>;
+
+    return (
+      <Widget width="6" height="1" posX="4" posY="1" debug="false" render={render}/>
     );
   }
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Col } from 'react-bootstrap';
 
-import TestWidget from '../components/TestWidget';
 import ClockContainer from './ClockContainer';
 import GridFull from '../components/GridFull';
 import WeatherContainer from './WeatherContainer';
@@ -17,6 +16,7 @@ var App = React.createClass({
         <ClockContainer />
         <WeatherContainer />
         <DateContainer />
+        <SpotifyContainer />
       </div>
     );
   }

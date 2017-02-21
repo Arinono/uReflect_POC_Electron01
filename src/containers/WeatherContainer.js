@@ -5,6 +5,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 import CurrentDayWeather from '../components/CurrentDayWeather';
 import NextDaysWeatherContainer from '../components/NextDaysWeatherContainer';
+import Widget from './Widget';
 
 var $ = require('jquery');
 
@@ -94,10 +95,13 @@ var WeatherContainer = React.createClass({
     this.connectionInterval = setInterval(this.updateRenderDependingOnConnection, 5000);
   },
   render: function() {
-    return (
-      <div className="weather widget">
-        {this.state.componentReader}
+    var render =
+      <div className="weather">
+          {this.state.componentReader}
       </div>
+
+    return (
+      <Widget width="3" height="1" posX="1" posY="1" debug="false" render={render} />
     );
   },
 });
