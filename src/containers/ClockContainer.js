@@ -6,11 +6,8 @@ import ClockHands from '../components/ClockHands';
 
 var ClockContainer = React.createClass({
   render: function() {
-    var style = {
-      transform: 'translate(1760px, 0px)'
-    }
     return (
-      <div className="widget clock" style={style}>
+      <div className="widget clock">
         <ClockFrame />
         <ClockDigits />
         <ClockHands />

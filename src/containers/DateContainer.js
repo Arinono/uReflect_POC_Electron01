@@ -4,11 +4,8 @@ import DateDay from '../components/DateDay'
 
 var DateContainer = React.createClass({
   render: function() {
-    var initialPos = {
-      transform: "translate(480px, -442px)"
-    }
     return (
-      <div className="widget date" style={initialPos}>
+      <div className="widget date">
         <DateDay />
       </div>
     );
