@@ -1,7 +1,7 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 
-var YouTubeModule = React.createClass({
+var YouTubeContainer = React.createClass({
   render: function() {
     const opts = {
       playerVars: {
@@ -27,4 +27,4 @@ var YouTubeModule = React.createClass({
 });
 
 
-export default YouTubeModule;
+export default YouTubeContainer;

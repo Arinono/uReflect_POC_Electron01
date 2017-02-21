@@ -42,7 +42,7 @@ if (weather) {
   weather = weather.forecast.simpleforecast.forecastday;
 }
 
-var Weather = React.createClass({
+var WeatherContainer = React.createClass({
   getInitialState: function() {
     return {
       nextDaysWeather: weather,
@@ -102,4 +102,4 @@ var Weather = React.createClass({
   },
 });
 
-export default Weather;
+export default WeatherContainer;
