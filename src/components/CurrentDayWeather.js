@@ -58,11 +58,11 @@ var CurrentDayWeather = React.createClass({
       var style = {
         paddingTop: 10
       };
+      // <div>{this.props.currentDayWeather.conditions}</div>
       return (
         <div className="currentWeather text-center">
           <WeatherIcons name={this.state.icon}  size="2x" />
           <div className="paddingWeatherIcon">
-            <div>{this.props.currentDayWeather.conditions}</div>
             <div>
               <span className="lowTemperature">{this.props.currentDayWeather.low.celsius}°C</span>
               <span> ~ </span>

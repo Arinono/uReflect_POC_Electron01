@@ -38,12 +38,12 @@ var NextDaysWeatherContainer = React.createClass({
                                         "tstorms" : "day-thunderstorm",
                                         "unknown" : "na"};
             var icon = weatherConditionsIcons[weather.icon];
+            // <div>{weather.conditions}</div>
             return (
               <div className="bot-box text-center" key={weather.period}>
                 <WeatherIcons name={icon} size="2x" />
                 <div className="paddingWeatherIcon">
                   <div>{weather.date.day} {weather.date.monthname} {weather.date.year}</div>
-                  <div>{weather.conditions}</div>
                   <div>{weather.low.celsius}°C ~ {weather.high.celsius}°C</div>
                 </div>
               </div>
