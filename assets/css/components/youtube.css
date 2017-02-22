@@ -1,0 +1,17 @@
+.youtube {
+  width: 100%;
+  height: 100%;
+  font-family : Roboto Regular;
+}
+.overlay, .render {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  display: none;
+  z-index: 9999;
+}
