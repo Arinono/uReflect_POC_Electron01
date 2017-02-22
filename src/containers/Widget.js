@@ -3,28 +3,48 @@ import React from 'react';
 const nbCol = 12;
 const nbRow = 6;
 
+function widgetStyle(width, height) {
+  return ({
+    width: "calc(100vw/" + nbCol + " * " + width + ")",
+    height: "calc(100vh/" + nbRow + " * " + height + ")"
+  });
+}
+
+function calcGridSize() {
+  return ({
+    x: $(window).width() / nbCol,
+    y: $(window).height() / nbRow
+  });
+}
+
 var Widget = React.createClass({
   render: function () {
-    var xSize = $(window).width() / nbCol,
-      ySize = $(window).height() / nbRow;
+    var colSize = calcGridSize(),
+    posX = this.props.options.pos.x * colSize.x - colSize.x,
+    posY = this.props.options.pos.y * colSize.y - colSize.y,
+    minX = colSize.x * this.props.options.size.width,
+    minY = colSize.y * this.props.options.size.height;
 
-    var style = {
-      width: "calc(100vw/" + nbCol + " * " + this.props.width + ")",
-      height: "calc(100vh/" + nbRow + " * " + this.props.height + ")",
-    }
-    if (this.props.debug == "true") {
+    var style = widgetStyle(this.props.options.size.width, this.props.options.size.height);
+    if (this.props.options.behaviour.debug == true) {
       style.background = "tomato";
     }
-    var posX = this.props.posX * xSize - xSize,
-    posY = this.props.posY * ySize - ySize,
-    minX = xSize * this.props.width,
-    minY = ySize * this.props.height;
-
     style.transform = "translate("+ posX +"px, "+ posY +"px)";
 
     return (
-      <div className="widget" data-posx={posX} data-posy={posY} data-minx={minX} data-miny={minY} style={style}>
-        {this.props.render}
+      <div className="widget"
+        data-x={posX}
+        data-y={posY}
+        data-minx={minX}
+        data-miny={minY}
+        data-resizable={this.props.options.behaviour.resizable}
+        data-draggable={this.props.options.behaviour.draggable}
+        data-resizableHorizontaly={this.props.options.resizeOpt.horizontal}
+        data-resizableVertcaly={this.props.options.resizeOpt.vertical}
+        style={style}>
+          <div className="edit-layout">
+            {this.props.options.render}
+          </div>
       </div>
     );
   }
