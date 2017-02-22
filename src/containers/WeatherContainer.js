@@ -1,6 +1,5 @@
 
 import React from 'react';
-import {Col} from 'react-bootstrap';
 import CircularProgress from 'material-ui/CircularProgress';
 
 import CurrentDayWeather from '../components/CurrentDayWeather';
@@ -49,7 +48,7 @@ var WeatherContainer = React.createClass({
       nextDaysWeather: weather,
       astronomy: astronomy,
       currentDayWeather: currentDayWeather,
-      componentReader: null
+      componentRender: null
     }
   },
   instantiateWeather: function() {
@@ -69,7 +68,7 @@ var WeatherContainer = React.createClass({
   updateRenderDependingOnConnection: function() {
     if (!this.isOnline && (this.isOnline = navigator.onLine)) {
       this.instantiateWeather();
-      this.setState({componentReader:
+      this.setState({componentRender:
           <div>
             <CurrentDayWeather currentDayWeather={this.state.currentDayWeather} astronomy={this.state.astronomy.sun_phase} />
             <NextDaysWeatherContainer nextDaysWeather={this.state.nextDaysWeather} />
@@ -77,9 +76,9 @@ var WeatherContainer = React.createClass({
       });
     }
     if (!this.isOnline){
-        this.setState({componentReader:
+        this.setState({componentRender:
             <div className="text-center">
-              <div>Attempting to reconnect. Please wait...</div>
+              <div>Attempting to connect to the weather widget. Please wait...</div>
               <CircularProgress size={40} />
             </div>
         });
@@ -97,7 +96,7 @@ var WeatherContainer = React.createClass({
   render: function() {
     var render =
       <div className="weather">
-          {this.state.componentReader}
+          {this.state.componentRender}
       </div>
 
     return (
