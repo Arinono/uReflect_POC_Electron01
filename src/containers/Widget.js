@@ -16,12 +16,14 @@ var Widget = React.createClass({
       style.background = "tomato";
     }
     var posX = this.props.posX * xSize - xSize,
-      posY = this.props.posY * ySize - ySize;
+    posY = this.props.posY * ySize - ySize,
+    minX = xSize * this.props.width,
+    minY = ySize * this.props.height;
 
     style.transform = "translate("+ posX +"px, "+ posY +"px)";
 
     return (
-      <div className="widget" data-x={posX} data-y={posY} style={style}>
+      <div className="widget" data-posx={posX} data-posy={posY} data-minx={minX} data-miny={minY} style={style}>
         {this.props.render}
       </div>
     );
