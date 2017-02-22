@@ -11,7 +11,6 @@ interact('.widget')
   });
 
 interact('#widget_container').on('hold', function (event) {
-    console.log("YOYO");
     if (holdingWidget === false) {
       if (!$('.widget').hasClass('editable')) {
         $('.widget').addClass('editable');
@@ -26,4 +25,7 @@ interact('#widget_container').on('hold', function (event) {
       $('.show-grid').fadeOut();
     }
   }
+})
+.on('up', function (event) {
+  holdingWidget = false;
 });

@@ -80,8 +80,6 @@ interact('.editable')
       posy += $(document).height() / 6;
     }
 
-    console.log(positions);
-
     x = (parseFloat(event.target.getAttribute('data-x')) || 0) + event.dx,
     y = (parseFloat(event.target.getAttribute('data-y')) || 0) + event.dy;
 
