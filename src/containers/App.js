@@ -13,7 +13,6 @@ var App = React.createClass({
       <div className="widgetContainer">
         <ClockContainer />
         <Weather />
-        <SpotifyContainer />
         <TwitterContainer />
       </div>
     );
