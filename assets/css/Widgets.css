@@ -1,0 +1,58 @@
+.widgetContainer {
+  width  : 100vw;
+  height : 100vh;
+}
+
+.square {
+  width  : calc(100vw/12);
+  height : calc(100vh/6);
+}
+
+.magenta {
+  background : magenta;
+}
+
+.widget {
+  position: absolute;
+}
+
+.editable {
+}
+
+.container {
+  max-width: none;
+  width: 100vw;
+  padding: 0;
+}
+
+#widget_preview {
+  display: none;
+  background: #c96868;
+  position: absolute;
+  z-index: -1;
+}
+
+.col-xs-12 {
+  height  : calc(100vh / 6);
+  padding : 0;
+}
+
+.show-grid .col-xs-12 {
+  border-bottom : 1px dashed white;
+}
+
+.show-grid .col-xs-1 {
+  border-right : 1px dashed white;
+}
+
+.col-xs-1 {
+  height : calc(100vh / 6);
+}
+
+.show-grid .col-xs-1:first-child {
+  border-left : 1px dashed white;
+}
+
+.show-grid .col-xs-12:first-child {
+  border-top : 1px dashed white;
+}
