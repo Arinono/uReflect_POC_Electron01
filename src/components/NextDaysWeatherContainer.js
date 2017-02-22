@@ -43,7 +43,7 @@ var NextDaysWeatherContainer = React.createClass({
                 <WeatherIcons name={icon} size="2x" />
                 <div className="paddingWeatherIcon">
                   <div>{weather.conditions}</div>
-                  <div>{weather.date.day} {weather.date.monthname} {weather.date.year}</div>
+                  <div>{weather.date.day} {weather.date.monthname}</div>
                   <div>{weather.low.celsius}°C ~ {weather.high.celsius}°C</div>
                 </div>
               </div>
