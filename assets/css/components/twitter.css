@@ -1,0 +1,58 @@
+.twitter {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100vh / 6 * 3);
+  font-family: Roboto Regular;
+  padding: 0;
+}
+
+.twitter_li {
+  list-style-type: none;
+  border-bottom:1px solid #c2c2c2;
+  margin-bottom:15px;
+  height:150px;
+  padding: 10px;
+}
+
+.twitter_username {
+  font-weight:bold;
+  font-size:15px;
+}
+
+.twitter_button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.twitter_anim250 {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.twitter_anim1000 {
+  -webkit-transition: all 1000ms ease-in-out;
+  -moz-transition: all 1000ms ease-in-out;
+  -ms-transition: all 1000ms ease-in-out;
+  -o-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+}
+
+.twitter_img {
+  margin-bottom: 75px;
+}
+
+.twitter_retweeted {
+  color: #19CF86;
+}
+
+.twitter_faved {
+  color: #e81c4f;
+}
