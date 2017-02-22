@@ -91,7 +91,7 @@ var WeatherContainer = React.createClass({
   },
   componentDidMount: function() {
     this.updateRenderDependingOnConnection();
-    this.weatherInterval = setInterval(this.instantiateWeather, 1000000);
+    this.weatherInterval = setInterval(this.instantiateWeather, 20000000);
     this.connectionInterval = setInterval(this.updateRenderDependingOnConnection, 5000);
   },
   render: function() {
