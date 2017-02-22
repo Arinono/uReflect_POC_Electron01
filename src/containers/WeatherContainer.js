@@ -101,7 +101,7 @@ var WeatherContainer = React.createClass({
       </div>
 
     return (
-      <Widget width="4" height="1" posX="2" posY="2" debug="false" render={render} />
+      <Widget width="3" height="2" posX="2" posY="2" debug="false" render={render} />
     );
   },
 });

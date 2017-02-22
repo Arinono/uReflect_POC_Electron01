@@ -21,7 +21,7 @@ var Widget = React.createClass({
     style.transform = "translate("+ posX +"px, "+ posY +"px)";
 
     return (
-      <div className="widget" style={style}>
+      <div className="widget" data-x={posX} data-y={posY} style={style}>
         {this.props.render}
       </div>
     );

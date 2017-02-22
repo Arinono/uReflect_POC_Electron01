@@ -16,7 +16,6 @@ var App = React.createClass({
         <ClockContainer />
         <WeatherContainer />
         <DateContainer />
-        <SpotifyContainer />
       </div>
     );
   }
