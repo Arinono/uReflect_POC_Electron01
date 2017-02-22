@@ -15,7 +15,7 @@ interact('#widget_container').on('hold', function (event) {
       if (!$('.widget').hasClass('editable')) {
         $('.widget').addClass('editable');
         $('.show-grid').fadeIn();
-        $('.overlay').css('display', 'block');
+        $('.overlay').css('display', 'initial');
       }
     }
 })
