@@ -7,12 +7,24 @@
   padding: 0;
 }
 
+.twitter::-webkit-scrollbar {
+    display: none;
+}
+
 .twitter_li {
   list-style-type: none;
   border-bottom:1px solid #c2c2c2;
   margin-bottom:15px;
   height:150px;
   padding: 10px;
+}
+
+.twitter_retweet:hover {
+  color: #19CF86;
+}
+
+.twitter_fav:hover {
+  color: #e81c4f;
 }
 
 .twitter_username {

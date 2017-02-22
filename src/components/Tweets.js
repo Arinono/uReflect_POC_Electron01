@@ -13,13 +13,11 @@ var Tweets = React.createClass({
         access_token_key: '833674085196562432-noLShBs8r8NmC7OwH2dEXSnnj43pPyK',
         access_token_secret: 'dxtnZG5OSVvB7hHa84AUuAotThSBqFjVC8WKjwpCMPNgD'
       }),
-      child: cp.fork('./read-twitter')
+      child: cp.fork('assets/js/read-twitter')
     }
   },
 
   componentDidMount: function() {
-    console.debug("MOUNT");
-
     setInterval(function(){
       $('.test').each(function(i, obj) {
         $(this).text(moment($(this).attr("date"), 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').fromNow());
@@ -27,19 +25,9 @@ var Tweets = React.createClass({
     }, 10000);
   },
 
-  componentWillUnmount: function() {
-    console.debug("UNMOUNT");
-    this.state.child.kill();
-  },
-
   render: function() {
 
     var client = this.state.client;
-
-    this.state.child.on('exit', function(){
-      console.log('Child exited!');
-    });
-
     $( document ).ready(function() {
         $('.widget').on('click', '.twitter_retweet',function() {
           var id = this.id;
