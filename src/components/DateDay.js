@@ -75,11 +75,11 @@ var DateDay = React.createClass({
     if (number == 1 || number == 21 || number == 31) {
       nieme = "st";
     } else if (number == 2 || number == 22) {
-      niem = "nd";
+      nieme = "nd";
     } else if (number == 3 || number == 23) {
-      niem = "rd";
+      nieme = "rd";
     } else {
-      niem = "th";
+      nieme = "th";
     }
 
     return (

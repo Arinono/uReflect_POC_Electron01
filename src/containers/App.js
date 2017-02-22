@@ -17,6 +17,7 @@ var App = React.createClass({
         <WeatherContainer />
         <DateContainer />
         <SpotifyContainer />
+        <WebcamContainer />
       </div>
     );
   }
