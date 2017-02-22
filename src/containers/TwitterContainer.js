@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Tweets from '../components/Tweets';
-import ReactScrollableList from 'react-scrollable-list';
 import Widget from './Widget';
 
 var TwitterContainer = React.createClass({
@@ -13,7 +12,7 @@ var TwitterContainer = React.createClass({
     </ul>;
 
     return (
-      <Widget width="4" height="3" posX="5" posY="2" debug="false" render={render} />
+      <Widget width="4" height="3" posX="1" posY="4" debug="false" render={render} />
     );
   },
 });
