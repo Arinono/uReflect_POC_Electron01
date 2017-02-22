@@ -8,8 +8,7 @@ var TwitterContainer = React.createClass({
   render: function() {
     var render =
     <div>
-      <div className="overlay"></div>
-      <ul className="twitter render" id="tweets">
+      <ul className="twitter" id="tweets">
         <Tweets />
         </ul>
       </div>;
