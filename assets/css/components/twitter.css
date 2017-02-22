@@ -1,18 +1,23 @@
 .twitter {
   overflow-y: auto;
-  width: calc(100vw / 12 * 3);
-  height: calc(100vh / 6 * 2);
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100vh / 6 * 3);
+  font-family: Roboto Regular;
+  padding: 0;
 }
 
 .twitter_li {
   list-style-type: none;
   border-bottom:1px solid #c2c2c2;
   margin-bottom:15px;
+  height:150px;
+  padding: 10px;
 }
 
 .twitter_username {
   font-weight:bold;
-  font-size:large;
+  font-size:15px;
 }
 
 .twitter_button {

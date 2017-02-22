@@ -1,22 +1,105 @@
 .nextDaysWeatherContainer {
-    border: "1px solid white";
-    display: "flex";
-    flex-flow: "row nowrap";
-    justify-content: "space-around";
+  display                    : flex;
+  padding                    : 10px 10px 6px 10px;
+  border-right               : 1px solid white;
+  border-bottom              : 1px solid white;
+  border-left                : 1px solid white;
+  border-bottom-right-radius : 25px;
+  border-bottom-left-radius  : 25px;
+  flex-flow                  : row nowrap;
+  justify-content            : space-around;
 }
 
 .bot-box {
-    width: 33%;
-    text-align: center;
+  width : 33%;
 }
 
-.bot-box:not(:last-child) {
-    border-right: 1px solid white;
+.bot-box:first-child {
+  border-right : 1px solid white;
+}
+
+.bot-box:last-child {
+  border-left : 1px solid white;
 }
 
 .weather {
-  min-width: 400px;
-  min-height: 221px;
-  width: 400px;
-  height: 221px;
+  width       : calc(100vw/12 * 3);
+  min-width   : calc(100vw/12 * 3);
+  min-height  : calc(100vh/12 * 2);
+  font-family : Roboto Regular;
+  /* 240px */
+}
+
+.currentWeather {
+  padding                 : 10px;
+  border-top              : 1px solid white;
+  border-right            : 1px solid white;
+  border-left             : 1px solid white;
+  border-top-left-radius  : 25px;
+  border-top-right-radius : 25px;
+}
+
+.paddingWeatherIcon {
+  padding-top : 10px;
+}
+
+.wi-day-windy:before {
+  color : lightsteelblue;
+}
+
+.wi-day-rain:before {
+  color : cornflowerblue;
+}
+
+.wi-day-sleet:before {
+  color : honeydew;
+}
+
+.wi-day-snow:before {
+  color : honeydew;
+}
+
+.wi-day-thunderstorm:before {
+  color : gold;
+}
+
+.wi-day-sunny:before {
+  color : gold;
+}
+
+.wi-day-cloudy:before {
+  color : lavender;
+}
+
+.wi-day-fog:before {
+  color : lavender;
+}
+
+.wi-day-haze:before {
+  color : lavender;
+}
+
+.wi-day-sunny-overcast:before {
+  color : lavender;
+}
+
+.wi-night-alt-cloudy:before,
+.wi-night-alt-rain:before,
+.wi-night-alt-showers:before,
+.wi-night-alt-sleet:before,
+.wi-night-alt-sleet:before,
+.wi-night-alt-snow:before,
+.wi-night-alt-snow:before,
+.wi-night-alt-thunderstorm:before,
+.wi-night-clear:before,
+.wi-night-clear:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-cloudy-gusts:before,
+.wi-night-fog:before,
+.wi-night-fog:before,
+.wi-night-partly-cloudy:before,
+.wi-night-partly-cloudy:before,
+.wi-night-thunderstorm:before {
+  color : darkslateblue;
 }

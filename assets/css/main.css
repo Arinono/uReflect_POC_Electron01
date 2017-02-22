@@ -1,8 +1,19 @@
+@font-face {
+  font-family : "Roboto Regular";
+  src         : url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family : "Roboto Bold";
+  src         : url('../fonts/Roboto-Bold.ttf');
+}
+
 body {
   height           : 100vh;
   margin           : 0;
   padding          : 0;
   color            : #eeeeec;
+  overflow         : hidden;
   background-color : black;
   font-family      : sans-serif;
   font-family      : Roboto;
@@ -24,4 +35,10 @@ h2 {
 #app {
   width  : 100vw;
   height : 100vh;
+}
+
+.show-grid {
+  z-index  : -2;
+  display  : none;
+  position : absolute;
 }

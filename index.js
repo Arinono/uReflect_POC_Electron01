@@ -30,11 +30,11 @@ app.once('ready', () => {
     frame: false,
     // in some case kiosk: true is not working
     // same goes for fullscreen but this is working
-    fullscreen: true,
+    fullscreen: false, // true,
     x: 0,
     y: 0,
-    width: area.width,
-    height: area.height
+    width: 1360, // area.width,
+    height: 768 // area.height
   });
 
   this.window

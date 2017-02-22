@@ -1,12 +1,6 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
 
-const currentWeather = {
-  textAlign: 'center',
-  border: '1px solid white',
-  padding: 10
-};
-
 var CurrentDayWeather = React.createClass({
     getInitialState: function() {
       return {
@@ -37,11 +31,11 @@ var CurrentDayWeather = React.createClass({
                                       "chancesnow" : this.day ? "day-snow" : "night-alt-snow",
                                       "chancetstorms" : this.day ? "day-thunderstorm" : "night-thunderstorm",
                                       "clear" : this.day ? "day-sunny" : "night-clear",
-                                      "cloudy" : this.day ? "day-cloudy" : "night-alt-cloudy",
+                                      "cloudy" : this.day ? "cloudy" : "cloudy",
                                       "flurries" : this.day ? "day-windy" : "night-cloudy-gusts",
                                       "fog" : this.day ? "day-fog" : "night-fog",
                                       "hazy" : this.day ? "day-haze" : "night-fog",
-                                      "mostlycloudy" : this.day ? "day-cloudy" : "night-alt-cloudy",
+                                      "mostlycloudy" : this.day ? "cloud" : "cloud",
                                       "mostlysunny" : this.day ? "day-sunny-overcast" : "night-partly-cloudy",
                                       "partlycloudy" : this.day ? "day-cloudy" : "night-alt-cloudy",
                                       "partlysunny" : this.day ? "day-sunny-overcast" : "night-partly-cloudy",
@@ -61,12 +55,21 @@ var CurrentDayWeather = React.createClass({
       this.interval = setInterval(this.instantiateIcon, 60000);
     },
     render: function() {
+      var style = {
+        paddingTop: 10
+      };
       return (
-        <div style={currentWeather}>
+        <div className="currentWeather text-center">
           <WeatherIcons name={this.state.icon}  size="2x" />
+          <div className="paddingWeatherIcon">
           <div>Today</div>
           <div>{this.props.currentDayWeather.conditions}</div>
-          <div>Low : {this.props.currentDayWeather.low.celsius}°C, &nbsp;High : {this.props.currentDayWeather.high.celsius}°C</div>
+            <div>
+              <span className="lowTemperature">{this.props.currentDayWeather.low.celsius}°C</span>
+              <span> ~ </span>
+              <span className="highTemperature">{this.props.currentDayWeather.high.celsius}°C</span>
+            </div>
+          </div>
         </div>
       );
     }
