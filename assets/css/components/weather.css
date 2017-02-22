@@ -23,9 +23,9 @@
 }
 
 .weather {
-  width       : calc(100vw/12 * 3);
-  min-width   : calc(100vw/12 * 3);
-  min-height  : calc(100vh/12 * 2);
+  width       : calc(100vw/12 * 4);
+  min-width   : calc(100vw/12 * 4);
+  min-height  : calc(100vh/12 * 1);
   font-family : Roboto Regular;
   /* 240px */
 }
