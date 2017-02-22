@@ -18,6 +18,12 @@
 
 .editable {
   border: 1px solid #ffbb00;
+  background:
+    url("../../fonts/top-left-corner.png") left top / 15px no-repeat,
+    url("../../fonts/top-right-corner.png") right top / 15px no-repeat,
+    url("../../fonts/bot-left-corner.png") left bottom / 15px no-repeat,
+    url("../../fonts/bot-right-corner.png") right bottom / 15px no-repeat;
+
 }
 
 .container {
