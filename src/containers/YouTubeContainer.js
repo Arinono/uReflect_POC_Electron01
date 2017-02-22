@@ -14,7 +14,8 @@ var YouTubeContainer = React.createClass({
       var width = $(".youtube").width(), height = $(".youtube").height();
       this.setState({componentRender:
         <div className="youtube">
-          <object width={width} height={height}>
+          <div className="overlay"></div>
+          <object width={width} height={height} className="render">
             <param name="movie" value="http://www.youtube.com/embed/q2pj6pAcmbk?html5=1&amp;rel=0&modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent&fs=0"/>
             <param name="allowFullScreen" value="false"/>
             <param name="allowscriptaccess" value="always"/>
