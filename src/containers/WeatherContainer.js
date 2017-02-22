@@ -90,7 +90,7 @@ var WeatherContainer = React.createClass({
   },
   componentDidMount: function() {
     this.updateRenderDependingOnConnection();
-    this.weatherInterval = setInterval(this.instantiateWeather, 20000000);
+    this.weatherInterval = setInterval(this.instantiateWeather, 7200000);
     this.connectionInterval = setInterval(this.updateRenderDependingOnConnection, 5000);
   },
   render: function() {
@@ -100,7 +100,7 @@ var WeatherContainer = React.createClass({
       </div>
 
     return (
-      <Widget width="3" height="2" posX="2" posY="2" debug="false" render={render} />
+      <Widget width="3" height="2" posX="1" posY="1" debug="false" render={render} />
     );
   },
 });

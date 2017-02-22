@@ -6,6 +6,7 @@ import GridFull from '../components/GridFull';
 import WeatherContainer from './WeatherContainer';
 import SpotifyContainer from './SpotifyContainer';
 import WebcamContainer from './WebcamContainer';
+import TwitterContainer from './TwitterContainer';
 import DateContainer from './DateContainer';
 import YouTubeContainer from './YouTubeContainer';
 
@@ -15,6 +16,7 @@ var App = React.createClass({
       <div className="widgetContainer" id="widget_container">
         <GridFull />
         <ClockContainer />
+        <TwitterContainer />
         <WeatherContainer />
         <DateContainer />
         <YouTubeContainer />
