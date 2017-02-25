@@ -48,7 +48,7 @@ var YouTubeContainer = React.createClass({
         height: 2
       },
       pos: {
-        x: 8,
+        x: 5,
         y: 2
       },
       behaviour: {

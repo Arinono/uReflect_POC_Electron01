@@ -31,8 +31,6 @@ var Widget = React.createClass({
     }
     styleContainer.transform = "translate("+ posX +"px, "+ posY +"px)";
 
-    var styleLayout = widgetStyle(this.props.options.size.width, this.props.options.size.height);
-
     return (
       <div className="widget"
         data-x={posX}
@@ -44,9 +42,8 @@ var Widget = React.createClass({
         data-resizableHorizontaly={this.props.options.resizeOpt.horizontal}
         data-resizableVertcaly={this.props.options.resizeOpt.vertical}
         style={styleContainer}>
-          <div className="overlay" style={styleLayout}>
-            {this.props.render}
-          </div>
+          <div className="overlay"></div>
+          {this.props.render}
       </div>
     );
   }

@@ -5,12 +5,10 @@ import Widget from './Widget';
 
 var WebcamContainer = React.createClass({
   render: function() {
-    var width = $(window).width() / 12 * 4,
-    height = $(window).height() / 6 * 3,
-    audio = false,
+    var audio = false,
     render =
       <div className="webcam">
-        <Webcam audio={audio} width={width} height={height} />
+        <Webcam audio={audio} />
       </div>;
 
       var options = {

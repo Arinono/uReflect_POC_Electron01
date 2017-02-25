@@ -20,6 +20,8 @@ var App = React.createClass({
         <ClockContainer />
         <DateContainer />
         <YouTubeContainer />
+        <SpotifyContainer />
+        <TwitterContainer />
       </div>
     );
   }
