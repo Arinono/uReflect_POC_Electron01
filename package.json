@@ -1,6 +1,6 @@
 {
   "name": "ureflect_poc_electron",
-  "version": "1.0.9",
+  "version": "1.0.0",
   "description": "basic app example",
   "main": "index.js",
   "scripts": {
@@ -19,9 +19,12 @@
     "benja": "latest",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
+    "install": "^0.8.7",
     "jquery": "^3.1.1",
     "material-ui": "^0.17.0",
+    "npm": "^4.2.0",
     "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.5.0",
@@ -32,6 +35,7 @@
     "react-weathericons": "^1.0.3",
     "react-webcam": "0.0.14",
     "spotify-web-api-js": "^0.21.2",
+    "twitter": "^1.7.0",
     "webpack": "^2.2.1"
   },
   "devDependencies": {

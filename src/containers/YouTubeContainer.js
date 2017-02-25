@@ -14,7 +14,6 @@ var YouTubeContainer = React.createClass({
       var width = $(".youtube").width(), height = $(".youtube").height();
       this.setState({componentRender:
         <div className="youtube">
-          <div className="overlay"></div>
           <object width={width} height={height} className="render">
             <param name="movie" value="http://www.youtube.com/embed/q2pj6pAcmbk?html5=1&amp;rel=0&modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent&fs=0"/>
             <param name="allowFullScreen" value="false"/>
@@ -43,8 +42,28 @@ var YouTubeContainer = React.createClass({
     this.connectionInterval = setInterval(this.updateRenderDependingOnConnection, 5000);
   },
   render: function() {
+    var options = {
+      size: {
+        width: 4,
+        height: 2
+      },
+      pos: {
+        x: 8,
+        y: 2
+      },
+      behaviour: {
+        resizable: true,
+        draggable: true,
+        debug: false
+      },
+      resizeOpt: {
+        horizontal: true,
+        vertical: true
+      }
+    }
+
     return (
-      <Widget width="4" height="2" posX="8" posY="2" debug="false" render={this.state.componentRender} />
+      <Widget options={options} render={this.state.componentRender} />
     )
   }
 });

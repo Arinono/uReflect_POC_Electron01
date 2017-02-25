@@ -25,11 +25,13 @@ var Widget = React.createClass({
     minX = colSize.x * this.props.options.size.width,
     minY = colSize.y * this.props.options.size.height;
 
-    var style = widgetStyle(this.props.options.size.width, this.props.options.size.height);
+    var styleContainer = widgetStyle(this.props.options.size.width, this.props.options.size.height);
     if (this.props.options.behaviour.debug == true) {
-      style.background = "tomato";
+      styleContainer.background = "tomato";
     }
-    style.transform = "translate("+ posX +"px, "+ posY +"px)";
+    styleContainer.transform = "translate("+ posX +"px, "+ posY +"px)";
+
+    var styleLayout = widgetStyle(this.props.options.size.width, this.props.options.size.height);
 
     return (
       <div className="widget"
@@ -41,9 +43,9 @@ var Widget = React.createClass({
         data-draggable={this.props.options.behaviour.draggable}
         data-resizableHorizontaly={this.props.options.resizeOpt.horizontal}
         data-resizableVertcaly={this.props.options.resizeOpt.vertical}
-        style={style}>
-          <div className="edit-layout">
-            {this.props.options.render}
+        style={styleContainer}>
+          <div className="overlay" style={styleLayout}>
+            {this.props.render}
           </div>
       </div>
     );

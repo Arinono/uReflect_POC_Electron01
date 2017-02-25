@@ -14,8 +14,28 @@ var ClockContainer = React.createClass({
       <ClockHands />
     </div>;
 
+    var options = {
+      size: {
+        width: 1,
+        height: 1
+      },
+      pos: {
+        x: 12,
+        y: 1
+      },
+      behaviour: {
+        resizable: false,
+        draggable: true,
+        debug: false
+      },
+      resizeOpt: {
+        horizontal: false,
+        vertical: false
+      }
+    }
+
     return (
-      <Widget width="1" height="1" posX="12" posY="1" debug="false" render={render} />
+      <Widget options={options} render={render} />
     );
   }
 });

@@ -48,7 +48,6 @@ interact('.editable')
     }
   })
   .resizable({
-
     edges: { top   : true, left  : true, bottom: true, right : true },
     snap: {
       targets: [
@@ -100,11 +99,16 @@ interact('.editable')
   })
   .on('resizemove', function (event) {
 
-    event.target.style.width  = event.rect.width + 'px';
-    event.target.style.height = event.rect.height + 'px';
+    var isTooSmall = false;
 
-    x = (parseFloat(event.target.getAttribute('data-x')) || 0) + event.deltaRect.left;
-    y = (parseFloat(event.target.getAttribute('data-y')) || 0) + event.deltaRect.top;
+    event.target.style.width  = event.rect.width >= parseFloat(event.target.getAttribute('data-minx')) ? event.rect.width + 'px' : event.target.style.width;
+    event.target.style.height = event.rect.height >= parseFloat(event.target.getAttribute('data-miny')) ? event.rect.height + 'px' : event.target.style.height;
+
+    x = (parseFloat(event.target.getAttribute('data-x')) || 0);
+    y = (parseFloat(event.target.getAttribute('data-y')) || 0);
+
+    x += event.rect.width >= parseFloat(event.target.getAttribute('data-minx')) ? event.deltaRect.left : 0;
+    y += event.rect.height >= parseFloat(event.target.getAttribute('data-miny')) ? event.deltaRect.top : 0;
 
     event.target.style.webkitTransform =
     event.target.style.transform =

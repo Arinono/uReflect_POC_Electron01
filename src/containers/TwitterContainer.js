@@ -1,23 +1,26 @@
 import React from 'react';
 
-import DateDay from '../components/DateDay'
+import Tweets from '../components/Tweets';
 import Widget from './Widget';
 
-var DateContainer = React.createClass({
+var TwitterContainer = React.createClass({
+
   render: function() {
     var render =
-      <div className="date">
-        <DateDay />
-      </div>;
+    <div>
+      <ul className="twitter" id="tweets">
+        <Tweets />
+      </ul>
+    </div>;
 
       var options = {
         size: {
-          width: 6,
-          height: 1
+          width: 4,
+          height: 3
         },
         pos: {
-          x: 4,
-          y: 1
+          x: 1,
+          y: 4
         },
         behaviour: {
           resizable: true,
@@ -31,9 +34,10 @@ var DateContainer = React.createClass({
       }
 
     return (
-      <Widget options={options} render={render}/>
+      <Widget options={options} render={render} />
+
     );
-  }
+  },
 });
 
-export default DateContainer;
+export default TwitterContainer;

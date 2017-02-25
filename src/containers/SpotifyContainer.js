@@ -22,8 +22,28 @@ var SpotifyContainer = React.createClass({
         theme={theme}
       />
 
+    var options = {
+      size: {
+        width: 2,
+        height: 2
+      },
+      pos: {
+        x: 1,
+        y: 5
+      },
+      behaviour: {
+        resizable: false,
+        draggable: false,
+        debug: false
+      },
+      resizeOpt: {
+        horizontal: true,
+        vertical: true
+      }
+    }
+
     return (
-      <Widget width="2" height="2" posX="1" posY="5" debug="false" render={render} />
+      <Widget options={options} render={render} />
     );
   }
 });

@@ -99,8 +99,28 @@ var WeatherContainer = React.createClass({
           {this.state.componentRender}
       </div>
 
+      var options = {
+        size: {
+          width: 3,
+          height: 2
+        },
+        pos: {
+          x: 1,
+          y: 1
+        },
+        behaviour: {
+          resizable: true,
+          draggable: true,
+          debug: false
+        },
+        resizeOpt: {
+          horizontal: true,
+          vertical: false
+        }
+      }
+
     return (
-      <Widget width="3" height="2" posX="1" posY="1" debug="false" render={render} />
+      <Widget options={options} render={render} />
     );
   },
 });
