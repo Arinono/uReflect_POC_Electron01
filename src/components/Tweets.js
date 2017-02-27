@@ -22,11 +22,27 @@ var Tweets = React.createClass({
   },
 
   componentDidMount: function() {
+    var client = this.state.client;
     setInterval(function(){
-      $('.test').each(function(i, obj) {
+      $('.twitter_date').each(function(i, obj) {
         $(this).text(moment($(this).attr("date"), 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').fromNow());
       });
-    }, 10000);
+    }, 60000);
+
+    setInterval(function(){
+    var i = 0;
+    $('.twitter_number').each(function(i, obj) {
+      var id = this.id;
+      var id_media = id.replace('retweet_text', '');
+      client.get('statuses/show', {id: id_media}, function(error, tweet, response) {
+          $('#retweet_text' + id_media).text(tweet.retweet_count);
+          $('#fav_text' + id_media).text(tweet.favorite_count);
+      });
+      i++;
+      if (i == 55)
+        return false;
+    });
+  }, 60000);
   },
 
   render: function() {
@@ -103,16 +119,16 @@ var Tweets = React.createClass({
           var li = `<li class="twitter_li row" id="twitter_`+tweet.id_str+`">
           <img class="col-md-2 no-float twitter_img" src="`+tweet.user.profile_image_url+`"></img>
           <div class="col-md-6"><span class="twitter_username">`+tweet.user.name+`</span> | @`+tweet.user.screen_name+`</div>
-          <p class="col-md-4 test" date="`+tweet.created_at+`" id="timeago`+tweet.id_str+`">`+ago+`</p>
+          <p class="col-md-4 twitter_date" date="`+tweet.created_at+`" id="timeago`+tweet.id_str+`">`+ago+`</p>
           <p class="col-md-10">`+tweet.text+`</p>
           <button id="retweet`+tweet.id_str+`" class="`+retweeted+` col-md-1 twitter_retweet twitter_button twitter_anim250"><i class="fa fa-retweet fa-lg" aria-hidden="true"></i></button>
-          <p id="retweet_text`+tweet.id_str+`" class="col-md-1 twitter_anim250">`+tweet.retweet_count+`</p>
+          <p id="retweet_text`+tweet.id_str+`" class="col-md-1 twitter_anim250 twitter_number">`+tweet.retweet_count+`</p>
           <button id="fav`+tweet.id_str+`" class="`+favorited+` col-md-1 twitter_fav twitter_button twitter_anim250"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></button>
           <p id="fav_text`+tweet.id_str+`" class="col-md-1 twitter_anim1000">`+tweet.favorite_count+`</p>
           </li>`;
 
           $('#tweets').prepend(li);
-          if ($('#tweets').scrollTop() > 100)
+          if ($('#tweets').scrollTop() > 0)
             $('#tweets').scrollTop($('#tweets').scrollTop() + 150 + 15);
 
 
