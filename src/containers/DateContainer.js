@@ -1,9 +1,12 @@
+console.log("DATE");
+
 import React from 'react';
 
 import DateDay from '../components/DateDay'
 import Widget from './Widget';
 
 var DateContainer = React.createClass({
+  
   render: function() {
     var render =
       <div className="date">

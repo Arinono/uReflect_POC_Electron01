@@ -42,3 +42,7 @@ h2 {
   display  : none;
   position : absolute;
 }
+
+.icon_profile {
+  width: 25px;
+}

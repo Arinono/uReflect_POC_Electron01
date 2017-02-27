@@ -68,3 +68,8 @@
 .twitter_faved {
   color: #e81c4f;
 }
+
+.twitter_scrolltop {
+  border:1px solid white;
+  border-radius:50px;
+}
