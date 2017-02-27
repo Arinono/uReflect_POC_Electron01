@@ -28,7 +28,7 @@ var DateDay = React.createClass({
       case 6:
         sDay = "Saturday";
         break;
-      case 7:
+      case 0:
         sDay = "Sunday";
         break;
     }

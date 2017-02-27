@@ -1,4 +1,5 @@
 import React from 'react';
+var $ = require('jquery');
 
 import ClockFrame from '../components/ClockFrame';
 import ClockDigits from '../components/ClockDigits';
@@ -6,6 +7,12 @@ import ClockHands from '../components/ClockHands';
 import Widget from './Widget';
 
 var ClockContainer = React.createClass({
+  // componentDidMount: function() {
+  //   $(".clock").parent().resize(function() {
+  //       console.log("ok");
+  //   });
+  // },
+
   render: function() {
     var render =
     <div className="clock">

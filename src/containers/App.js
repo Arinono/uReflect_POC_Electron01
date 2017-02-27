@@ -3,7 +3,7 @@ import { Grid, Col } from 'react-bootstrap';
 
 import ClockContainer from './ClockContainer';
 import GridFull from '../components/GridFull';
-// import WeatherContainer from './WeatherContainer';
+import WeatherContainer from './WeatherContainer';
 import SpotifyContainer from './SpotifyContainer';
 import WebcamContainer from './WebcamContainer';
 import TwitterContainer from './TwitterContainer';
@@ -18,10 +18,11 @@ var App = React.createClass({
       <div className="widgetContainer" id="widget_container">
         <GridFull />
         <ClockContainer />
-        <DateContainer />
-        <YouTubeContainer />
         <SpotifyContainer />
         <TwitterContainer />
+        <DateContainer />
+        <YouTubeContainer />
+        <WeatherContainer />
       </div>
     );
   }

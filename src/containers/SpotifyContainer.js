@@ -4,7 +4,7 @@ import SpotifyPlayer from 'react-spotify-player';
 import Widget from './Widget';
 
 const defaultSize = {
-  width: 4,
+  width: 3,
   height: 3
 };
 
@@ -33,7 +33,7 @@ var SpotifyContainer = React.createClass({
         height: defaultSize.height
       },
       pos: {
-        x: 9,
+        x: 10,
         y: 4
       },
       behaviour: {
