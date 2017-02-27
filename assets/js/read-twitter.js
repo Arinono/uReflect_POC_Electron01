@@ -1,4 +1,3 @@
-console.log("ENTER TWITTER FORK");
 function callApi(client) {
   var Twitter = require('twitter');
   var client = new Twitter({
@@ -24,12 +23,10 @@ function callApi(client) {
 
     var stream = client.stream('user', {track: ""});
     stream.on('error', function(error) {
-      console.log(error);
       process.send("4xx");
       process.exit(0);
     });
     stream.on('data', function(event) {
-      console.log(event);
       process.send(event);
     });
 }
@@ -37,6 +34,5 @@ function callApi(client) {
 callApi();
 
 process.on('disconnect', function() {
-  console.log("EXIT");
 process.exit(0);
 });

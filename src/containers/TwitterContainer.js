@@ -23,8 +23,28 @@ var TwitterContainer = React.createClass({
       </ul>
     </div>;
 
+    var options = {
+      size: {
+        width: 4,
+        height: 3
+      },
+      pos: {
+        x: 1,
+        y: 4
+      },
+      behaviour: {
+        resizable: true,
+        draggable: true,
+        debug: false
+      },
+      resizeOpt: {
+        horizontal: true,
+        vertical: true
+      }
+    }
+
     return (
-      <Widget width="4" height="3" posX="1" posY="4" debug="false" render={render} />
+      <Widget options={options} render={render} />
 
     );
   },

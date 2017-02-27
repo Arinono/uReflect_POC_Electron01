@@ -3,10 +3,15 @@ import React from 'react';
 import SpotifyPlayer from 'react-spotify-player';
 import Widget from './Widget';
 
+const defaultSize = {
+  width: 3,
+  height: 3
+};
+
 var SpotifyContainer = React.createClass({
   render: function() {
-    var width = $(window).width() / 12 * 2,
-    height = $(window).height() / 6  * 2,
+    var width = $(window).width() / 12 * defaultSize.width,
+    height = $(window).height() / 6  * defaultSize.height,
     size = {
       width: width,
       height: height
@@ -22,8 +27,28 @@ var SpotifyContainer = React.createClass({
         theme={theme}
       />
 
+    var options = {
+      size: {
+        width: defaultSize.width,
+        height: defaultSize.height
+      },
+      pos: {
+        x: 1,
+        y: 4
+      },
+      behaviour: {
+        resizable: true,
+        draggable: true,
+        debug: false
+      },
+      resizeOpt: {
+        horizontal: true,
+        vertical: true
+      }
+    }
+
     return (
-      <Widget width="2" height="2" posX="1" posY="5" debug="false" render={render} />
+      <Widget options={options} render={render} />
     );
   }
 });

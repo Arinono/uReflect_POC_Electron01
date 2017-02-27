@@ -6,7 +6,6 @@ import Twitter from 'twitter';
 var Tweets = React.createClass({
 
   getInitialState: function() {
-    console.log("CREATE");
     return {
       client: new Twitter({
         consumer_key: '1sDZfiMtUdzmiD07l1J09MSm3',
@@ -113,7 +112,6 @@ var Tweets = React.createClass({
           </li>`;
 
           $('#tweets').prepend(li);
-          console.log($('#tweets').scrollTop());
           if ($('#tweets').scrollTop() > 100)
             $('#tweets').scrollTop($('#tweets').scrollTop() + 150 + 15);
 

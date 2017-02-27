@@ -1,4 +1,3 @@
-console.log("ENTER APP");
 import React from 'react';
 import { Grid, Col } from 'react-bootstrap';
 
@@ -8,6 +7,8 @@ import ChildProfile from '../profiles/ChildProfile';
 import FatherProfile from '../profiles/FatherProfile';
 import MotherProfile from '../profiles/MotherProfile';
 
+import Widget from './Widget';
+
 var App = React.createClass({
 
   render: function() {
@@ -16,15 +17,14 @@ var App = React.createClass({
       <div className="widgetContainer" id="widget_container">
         <GridFull />
         <FatherProfile state={this.state.stateFather} />
-        <MotherProfile state={this.state.stateMother}/>
-        <ChildProfile state={this.state.stateChild}/>
-        <ProfileContainer father={this.father} mother={this.mother} child={this.child} actual={this.state.profile}/>
+        <MotherProfile state={this.state.stateMother} />
+        <ChildProfile state={this.state.stateChild} />
+        <ProfileContainer father={this.father} mother={this.mother} child={this.child} actual={this.state.profile} />
       </div>
     );
   },
 
   getInitialState: function() {
-    console.log("INITAPP");
     return {
         stateFather: 'visible',
         stateMother: 'hidden',

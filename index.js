@@ -8,7 +8,7 @@ require('http')
   // will respond to :80 too via iptables
 
 // Debug tools
-require('electron-debug')({showDevTools: true});
+require('electron-debug')({showDevTools: false});
 
 // simple app example
 const electron = require('electron');
