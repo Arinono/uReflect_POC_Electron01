@@ -19,14 +19,6 @@
   padding: 10px;
 }
 
-.twitter_retweet:hover {
-  color: #19CF86;
-}
-
-.twitter_fav:hover {
-  color: #e81c4f;
-}
-
 .twitter_username {
   font-weight:bold;
   font-size:15px;
@@ -67,4 +59,9 @@
 
 .twitter_faved {
   color: #e81c4f;
+}
+
+.twitter_scrolltop {
+  border:1px solid white;
+  border-radius:50px;
 }

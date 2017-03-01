@@ -1,28 +1,66 @@
 import React from 'react';
 import { Grid, Col } from 'react-bootstrap';
 
-import ClockContainer from './ClockContainer';
 import GridFull from '../components/GridFull';
-//import WeatherContainer from './WeatherContainer';
-import SpotifyContainer from './SpotifyContainer';
-import WebcamContainer from './WebcamContainer';
-//import TwitterContainer from './TwitterContainer';
-import DateContainer from './DateContainer';
-import YouTubeContainer from './YouTubeContainer';
-import RssContainer from './RssContainer'
+
+import ProfileContainer from './ProfileContainer';
+import ChildProfile from '../profiles/ChildProfile';
+import FatherProfile from '../profiles/FatherProfile';
+import MotherProfile from '../profiles/MotherProfile';
+
+import Widget from './Widget';
 
 var App = React.createClass({
+
   render: function() {
+
     return (
       <div className="widgetContainer" id="widget_container">
         <GridFull />
-        <ClockContainer />
-        <DateContainer />
-        <YouTubeContainer />
-        <RssContainer />
+        <FatherProfile state={this.state.stateFather} />
+        <MotherProfile state={this.state.stateMother} />
+        <ChildProfile state={this.state.stateChild} />
+        <ProfileContainer father={this.father} mother={this.mother} child={this.child} actual={this.state.profile} />
       </div>
     );
+  },
+
+  getInitialState: function() {
+    return {
+        stateFather: 'visible',
+        stateMother: 'hidden',
+        stateChild: 'hidden',
+        profile: 'father'
+    };
+  },
+
+  father: function() {
+    this.setState({
+      stateFather: 'visible',
+      stateMother: 'hidden',
+      stateChild: 'hidden',
+      profile: 'father'
+   });
+  },
+
+  mother: function() {
+    this.setState({
+      stateFather: 'hidden',
+      stateMother: 'visible',
+      stateChild: 'hidden',
+      profile: 'mother'
+   });
+  },
+
+  child: function() {
+    this.setState({
+      stateFather: 'hidden',
+      stateMother: 'hidden',
+      stateChild: 'visible',
+      profile: 'child'
+   });
   }
+
 });
 
 export default App;
