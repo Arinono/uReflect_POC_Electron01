@@ -104,8 +104,8 @@ var Tweets = React.createClass({
                             <p id="fav_text`+tweet.id_str+`" class="col-md-1 twitter_anim1000">`+tweet.favorite_count+`</p>
                           </li>`;
 
-                          $('#tweets').prepend(li);
-                          $('#tweets').scrollTop($('#tweets').scrollTop() + 150 + 15);
+                $('#tweets').prepend(li);
+                $('#tweets').scrollTop($('#tweets').scrollTop() + 150 + 15);
 
 
                 }
