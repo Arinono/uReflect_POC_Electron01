@@ -4,7 +4,7 @@ import ClockContainer from '../containers/ClockContainer';
 //import WeatherContainer from '../containers/WeatherContainer';
 import TwitterContainer from '../containers/TwitterContainer';
 import DateContainer from '../containers/DateContainer';
-//import RssContainer from '../containers/RssContainer';
+import RssContainer from '../containers/RssContainer';
 
 const styles = {
   none: {
@@ -23,6 +23,7 @@ var FatherProfile = React.createClass({
         <DateContainer />
         <TwitterContainer />
         <ClockContainer />
+        <RssContainer />
       </div>
       );
   },
