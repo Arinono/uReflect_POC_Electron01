@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Col } from 'react-bootstrap';
 
 import GridFull from '../components/GridFull';
-
 import ProfileContainer from './ProfileContainer';
 import ChildProfile from '../profiles/ChildProfile';
 import FatherProfile from '../profiles/FatherProfile';
